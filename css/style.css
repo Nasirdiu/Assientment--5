@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(121, 124, 124);
+}
 .input-field{
     background-color: rgb(243, 248, 246);
     border-radius: 2px;
@@ -7,5 +10,10 @@
     width:200px;
     height: 30px;
 }
-
+.head{
+    color: rgb(133, 7, 126);
+}
+.imges{
+    height: 100%;
+}
 
