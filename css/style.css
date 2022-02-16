@@ -5,13 +5,13 @@ body{
     background-color: rgb(243, 248, 246);
     border-radius: 3px;
     border: none;
-    border: 2px solid #6b9ae0
+    border: 3px solid #6b9ae0
     ;
     width:200px;
     height: 30px;
 }
 .head{
-    color: rgb(133, 7, 126);
+    color: rgb(233, 240, 239);
 }
 .imges{
     height: 100%;
