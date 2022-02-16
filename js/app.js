@@ -11,28 +11,35 @@ document.getElementById('amount-save');
 document.getElementById('rem-balance');
 
  */
-function getUpdate() {
-  const foodTotal = document.getElementById("food-total");
+function getUpdate(inputId) {
+  const foodTotal = document.getElementById(inputId);
   const foodText = foodTotal.value;
   const foodAmount = parseInt(foodText);
+
+//clear
+  foodTotal.value = "";
+  return foodAmount;
 }
 document.getElementById("btn-calculate").addEventListener("click", function () {
   //food amount
   /* const foodTotal = document.getElementById("food-total");
   const foodText = foodTotal.value;
   const foodAmount = parseInt(foodText); */
+  const foodAmount=getUpdate("food-total")
   // console.log(foodAmount);
   //rent amount
-  const rentTotal = document.getElementById("rent-total");
+  /* const rentTotal = document.getElementById("rent-total");
   const rentText = rentTotal.value;
-  const rentAmount = parseInt(rentText);
+  const rentAmount = parseInt(rentText); */
+  const rentAmount=getUpdate("rent-total")
+
   // console.log(rentAmount);
   //other amount
-  const otherTotal = document.getElementById("other-total");
+  /* const otherTotal = document.getElementById("other-total");
   const otherText = otherTotal.value;
-  const otherAmount = parseInt(otherText);
-  // console.log(otherAmount);
-  // otherTotal.value=otherAmount +rentAmount+foodAmount;
+  const otherAmount = parseInt(otherText); */
+  const otherAmount=getUpdate("other-total")
+
   // total express
   const totalExpress = document.getElementById("expenses-total");
   const totalText = totalExpress.innerText;
@@ -49,13 +56,12 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   const totalBalance = document.getElementById("balance-total");
   const totalBalanceText = totalBalance.innerText;
   const totalBalanceAmount = totalIncomeAmount - totalAmountCost;
-
   totalBalance.innerText = totalBalanceAmount;
 
   //clear
-  foodTotal.value = "";
+  /* foodTotal.value = "";
   rentTotal.value = "";
-  otherTotal.value = "";
+  otherTotal.value = ""; */
 });
 
 document.getElementById("btn-save").addEventListener("click", function () {
