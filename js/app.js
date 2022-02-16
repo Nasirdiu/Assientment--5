@@ -1,25 +1,13 @@
-/* document.getElementById('income-total');
-document.getElementById('food-total');
-document.getElementById('rent-total');
-document.getElementById('other-total');
-document.getElementById('btn-calculate');
-document.getElementById('expenses-total');
-document.getElementById('balance-total');
-document.getElementById('save-total');
-document.getElementById('btn-save');
-document.getElementById('amount-save');
-document.getElementById('rem-balance');
-
- */
+//function 
 function getUpdate(inputId) {
   const foodTotal = document.getElementById(inputId);
   const foodText = foodTotal.value;
   const foodAmount = parseInt(foodText);
-
   //clear
   foodTotal.value = "";
   return foodAmount;
 }
+// income option
 document.getElementById("btn-calculate").addEventListener("click", function () {
   const foodAmount = getUpdate("food-total");
   const rentAmount = getUpdate("rent-total");
@@ -40,17 +28,19 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
     //Total Balance
     const totalBalance = document.getElementById("balance-total");
     const totalBalanceText = totalBalance.innerText;
-    if (Number(totalAmountCost) < totalIncomeAmount) {
+    if (parseInt(totalAmountCost) < totalIncomeAmount) {
       const totalBalanceAmount = totalIncomeAmount - totalAmountCost;
       totalBalance.innerText = totalBalanceAmount;
       totalExpress.innerText = totalAmountCost;
     } else {
-      alert("blance is low3");
+      alert("Your Income Balance Is Low");
     }
   } else {
-    alert("   enter a number");
+    alert("Please Enter a Number");
   }
 });
+
+// Saving Part
 
 document.getElementById("btn-save").addEventListener("click", function () {
   //income total
@@ -66,19 +56,20 @@ document.getElementById("btn-save").addEventListener("click", function () {
     //saving amount
     const savingAmount = document.getElementById("amount-save");
     savingAmount.innerText = saveParsent * totalIncomeAmount;
-    const cheekBlance = document.getElementById('balance-total')
-    if (Number(savingAmount.innerText) < Number(cheekBlance.innerText)) {
-        //reaming balance
-        const remBalance = document.getElementById("rem-balance");
-        const totalBalance = document.getElementById("balance-total");
-        remBalance.innerText =
+    const cheekBalance = document.getElementById("balance-total");
+    if (parseInt(savingAmount.innerText) < parseInt(cheekBalance.innerText)) {
+      //reaming balance
+      const remBalance = document.getElementById("rem-balance");
+      const totalBalance = document.getElementById("balance-total");
+      remBalance.innerText =
         parseInt(totalBalance.innerText) - parseInt(savingAmount.innerText);
-        //clear
-        totalIncome.value = "";
-    }else{
-        console.log(('your blance is low'));
+      //clear
+      saveTotal.value='';
+      totalIncome.value = "";
+    } else {
+      console.log("Your Balance Is Low");
     }
-  }else{
-      alert('enter a number');
+  } else {
+    alert("Please Enter A Number");
   }
 });

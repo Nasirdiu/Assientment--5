@@ -18,8 +18,8 @@
   <body>
     <header class="container mt-5">
       <h1 class="text-center head">
-        Swiss Bank Calculatortion
-        <img src="images/doller.jpg" alt="" class="img-fluid" width="25px" />
+        Swiss Bank <span class="text-color">Calculatortion</span>
+        <img src="images/doller.jpg" alt="" class="img-fluid" width="35px" />
       </h1>
     </header>
 
@@ -27,45 +27,84 @@
     <main class="mb-lg-5">
       <section class="container mt-5">
         <div class="row">
-          <div class="col-md-6 ">
-            <img class="img-fluid imges" src="images/mony.jpg" alt="" width="705px" />
+          <div class="col-md-6">
+            <img
+              class="img-fluid imges"
+              src="images/mony.jpg"
+              alt=""
+              width="705px"
+            />
           </div>
 
           <div class="bg-light col-md-6 text-center">
             <h5>Income</h5>
             <h6 class="mt-4">
-            Total Income :
-              <input class="input-field" type="number" name="" id="income-total" />
+              Total Income :
+              <input
+                class="input-field"
+                type="number"
+                name=""
+                id="income-total"
+              />
             </h6>
-            <hr>
+            <hr />
             <h5>Expenses</h5>
-            <hr>
+            <hr />
             <h6 class="mt-3">
               Food Cost :
-              <input class="input-field" type="number" name="" id="food-total" />
+              <input
+                class="input-field"
+                type="number"
+                name=""
+                id="food-total"
+              />
             </h6>
             <h6 class="mt-3">
               Rent Cost :
-              <input class="input-field" type="number" name="" id="rent-total" />
+              <input
+                class="input-field"
+                type="number"
+                name=""
+                id="rent-total"
+              />
             </h6>
             <h6 class="mt-3">
               Other Cost :
-              <input class="input-field" type="number" name="" id="other-total" />
+              <input
+                class="input-field"
+                type="number"
+                name=""
+                id="other-total"
+              />
             </h6>
-            <button id="btn-calculate" class="btn btn-primary w-25">Calculate</button>
+            <button id="btn-calculate" class="btn btn-primary w-25">
+              Calculate
+            </button>
             <!-- avarage  -->
 
-            <h5 class="mt-4">Total Expenses: <span id="expenses-total">000</span></h5>
-            <h5  class="mt-2">Total Balance: <span id="balance-total">000</span></h5>
+            <h5 class="mt-4">
+              Total Expenses: <span id="expenses-total">00</span>
+            </h5>
+            <h5 class="mt-2">
+              Total Balance: <span id="balance-total">00</span>
+            </h5>
 
             <!-- saving option  -->
             <h6 class="mt-4">
               Save:
-              <input class="input-field w-25" type="number" name="" id="save-total" /> %
+              <input
+                class="input-field w-25"
+                type="number"
+                name=""
+                id="save-total"
+              />
+              %
               <button id="btn-save" class="btn btn-primary w-25">Save</button>
             </h6>
 
-            <h5 class="mt-4">Saving Amount : <span id="amount-save">00</span></h5>
+            <h5 class="mt-4">
+              Saving Amount : <span id="amount-save">00</span>
+            </h5>
             <h5>Remaining Balance : <span id="rem-balance">00</span></h5>
           </div>
         </div>
