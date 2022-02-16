@@ -3,9 +3,9 @@ body{
 }
 .input-field{
     background-color: rgb(243, 248, 246);
-    border-radius: 2px;
+    border-radius: 3px;
     border: none;
-    border: 2px solid #DCDCDC
+    border: 2px solid #6b9ae0
     ;
     width:200px;
     height: 30px;
