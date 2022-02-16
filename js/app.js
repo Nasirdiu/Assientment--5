@@ -11,12 +11,16 @@ document.getElementById('amount-save');
 document.getElementById('rem-balance');
 
  */
-
-document.getElementById("btn-calculate").addEventListener("click", function () {
-  //food amount
+function getUpdate() {
   const foodTotal = document.getElementById("food-total");
   const foodText = foodTotal.value;
   const foodAmount = parseInt(foodText);
+}
+document.getElementById("btn-calculate").addEventListener("click", function () {
+  //food amount
+  /* const foodTotal = document.getElementById("food-total");
+  const foodText = foodTotal.value;
+  const foodAmount = parseInt(foodText); */
   // console.log(foodAmount);
   //rent amount
   const rentTotal = document.getElementById("rent-total");
@@ -33,21 +37,45 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   const totalExpress = document.getElementById("expenses-total");
   const totalText = totalExpress.innerText;
   const totalAmount = parseInt(totalText);
-  totalExpress.innerText = totalAmount + otherAmount + rentAmount + foodAmount;
-  foodTotal.value = "";
-  rentTotal.value = "";
-  otherTotal.value = "";
+  const totalAmountCost = totalAmount + otherAmount + rentAmount + foodAmount;
+  totalExpress.innerText = totalAmountCost;
 
   //income total
   const totalIncome = document.getElementById("income-total");
   const totalIncomeText = totalIncome.value;
-  const totalIncomeTextAmount = parseInt(totalIncomeText);
-  //  totalIncome.value=totalIncomeTextAmount -totalExpress;
+  const totalIncomeAmount = parseInt(totalIncomeText);
 
   //Total Balance
   const totalBalance = document.getElementById("balance-total");
   const totalBalanceText = totalBalance.innerText;
-  const totalBalanceAmount = parseInt(totalBalanceText);
-  totalBalanceAmount = totalIncomeTextAmount - totalExpress;
+  const totalBalanceAmount = totalIncomeAmount - totalAmountCost;
+
+  totalBalance.innerText = totalBalanceAmount;
+
   //clear
+  foodTotal.value = "";
+  rentTotal.value = "";
+  otherTotal.value = "";
+});
+
+document.getElementById("btn-save").addEventListener("click", function () {
+  //income total
+  const totalIncome = document.getElementById("income-total");
+  const totalIncomeText = totalIncome.value;
+  const totalIncomeAmount = parseInt(totalIncomeText);
+  //save amount
+  const saveTotal = document.getElementById("save-total");
+  const saveText = saveTotal.value;
+  const saveAmount = parseInt(saveText);
+  const saveParsent = saveAmount / 100;
+  //saving amount
+  const savingAmount = document.getElementById("amount-save");
+  savingAmount.innerText = saveParsent * totalIncomeAmount;
+  //reaming balance
+  const remBalance = document.getElementById("rem-balance");
+  const totalBalance = document.getElementById("balance-total");
+  remBalance.innerText =
+    parseInt(totalBalance.innerText) - parseInt(savingAmount.innerText);
+  //clear
+  totalIncome.value = "";
 });
