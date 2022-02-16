@@ -1,0 +1,11 @@
+.input-field{
+    background-color: rgb(243, 248, 246);
+    border-radius: 2px;
+    border: none;
+    border: 2px solid #DCDCDC
+    ;
+    width:200px;
+    height: 30px;
+}
+
+
