@@ -14,7 +14,7 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   const otherAmount = getUpdate("other-total");
 
   // total express
-  if (foodAmount > 0 && rentAmount > 0 && otherAmount > 0) {
+  if (foodAmount >= 0 && rentAmount >= 0 && otherAmount >= 0) {
     const totalExpress = document.getElementById("expenses-total");
     const totalText = totalExpress.innerText;
     const totalAmount = parseInt(totalText);
@@ -63,7 +63,7 @@ document.getElementById("btn-save").addEventListener("click", function () {
       saveTotal.value = "";
       totalIncome.value = "";
     } else {
-      console.log("Your Balance Is Low");
+      alert("Your Balance Is Low");
     }
   } else {
     alert("Please Enter A Number");
